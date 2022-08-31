@@ -5,7 +5,7 @@ import { useEffect } from "react"
 const NotFoundPage: NextPage = () => {
 	const router = useRouter()
 	useEffect(() => {
-		const action = setTimeout(() => router.push("/"), 3000)
+		const action = setTimeout(() => router.push("/"), 5000)
 		return () => clearTimeout(action)
 	}, [])
 	

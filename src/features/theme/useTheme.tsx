@@ -3,19 +3,25 @@ import { useEffect, useState } from "react"
 export const useTheme = () => {
 	const [theme, setTheme] = useState("light" as Theme)
 
+	const themeInit = (): Theme => {
+		const theme = localStorage.getItem("theme")
+		if (theme) return theme as Theme
+		if (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark"
+		return "light"
+	}
+
+	const setThemePublic = (theme: Theme) => {
+		setTheme(theme)
+		localStorage.setItem("theme", theme)
+	}
+
 	const toggleTheme = () => {
-		setTheme(theme === "light" ? "dark" : "light")
-		localStorage.setItem("theme", theme === "light" ? "dark" : "light")
+		setThemePublic(theme === "light" ? "dark" : "light")
 	}
 
 	useEffect(() => {
-		const theme = localStorage.getItem("theme")
-		if (theme) setTheme(theme as Theme)
+		setTheme(themeInit())
 	}, [])
 
-	useEffect(() => {
-		localStorage.setItem("theme", theme)
-	}, [theme])
-
-	return { theme, setTheme, toggleTheme }
+	return { theme, setTheme: setThemePublic, toggleTheme }
 }

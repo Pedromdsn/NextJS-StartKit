@@ -15,7 +15,7 @@ class MyDocument extends Document {
 					<meta name="author" content="Pedromdsn <me@pedromdsn.com>" />
 					<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 				</Head>
-				<body className='font-Main'>
+				<body className="font-Main scrollbar-thin scrollbar-track-gray-400 scrollbar-thumb-gray-700">
 					<Main />
 					<NextScript />
 				</body>
