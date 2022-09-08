@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar-thumb {
-	border-radius: 15px;
+  border-radius: 15px;
 }

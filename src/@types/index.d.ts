@@ -1,3 +1,3 @@
-interface ComponentWithChildren {
+interface WithChildren {
 	children: React.ReactNode
 }

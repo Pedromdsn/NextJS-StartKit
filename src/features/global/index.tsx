@@ -1,9 +1,5 @@
 import { ThemeProvider } from "../theme/ThemeContext"
 
-interface GlobalContextProps {
-	children: React.ReactNode
-}
-
-export const GlobalContext = ({ children }: GlobalContextProps) => {
+export const GlobalContext = ({ children }: WithChildren) => {
 	return <ThemeProvider>{children}</ThemeProvider>
 }

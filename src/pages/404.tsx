@@ -8,7 +8,7 @@ const NotFoundPage: NextPage = () => {
 		const action = setTimeout(() => router.push("/"), 5000)
 		return () => clearTimeout(action)
 	}, [])
-	
+
 	return (
 		<div className="flex min-h-screen flex-col items-center justify-center py-2 pb-[3%]">
 			<h1 className="text-9xl">404</h1>

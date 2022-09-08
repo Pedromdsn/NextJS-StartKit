@@ -1,23 +1,34 @@
-import { createContext } from "react"
-import { useTheme } from "./useTheme"
+import { createContext, useCallback, useEffect, useState } from "react"
 
-interface ThemeContextProps {
-	theme: Theme
-	setTheme: (theme: Theme) => void
-	toggleTheme: () => void
-}
+export const ThemeContext = createContext({} as ThemeContextValue)
 
-interface DarkModeProviderProps {
-	children: React.ReactNode
-}
+const defaultTheme: Theme = "light"
 
-export const ThemeContext = createContext({} as ThemeContextProps)
+export const ThemeProvider = ({ children }: WithChildren) => {
+	const [theme, setTheme] = useState("light" as Theme)
 
-export const ThemeProvider = ({ children }: DarkModeProviderProps) => {
-	const theme = useTheme()
+	const setThemeWrapper = useCallback((theme: Theme) => {
+		setTheme(theme)
+		localStorage.setItem("theme", theme)
+	}, [])
+
+	const toggleTheme = useCallback(() => {
+		setThemeWrapper(theme === "light" ? "dark" : "light")
+	}, [theme])
+
+	useEffect(() => {
+		const themeInit = (): Theme => {
+			const theme = localStorage.getItem("theme")
+			if (theme) return theme as Theme
+			if (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) return "dark"
+			return defaultTheme
+		}
+		setTheme(themeInit())
+	}, [])
+
 	return (
-		<ThemeContext.Provider value={theme}>
-			<div data-theme={theme.theme}>{children}</div>
+		<ThemeContext.Provider value={{ theme, setTheme: setThemeWrapper, toggleTheme }}>
+			<div data-theme={theme}>{children}</div>
 		</ThemeContext.Provider>
 	)
 }
