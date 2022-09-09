@@ -1,6 +1,6 @@
 import { createContext, useCallback, useEffect, useState } from "react"
 
-export const ThemeContext = createContext({} as ThemeContextValue)
+export const ThemeContext = createContext<ThemeContextValue | null>(null)
 
 const defaultTheme: Theme = "light"
 
