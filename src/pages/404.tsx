@@ -11,8 +11,8 @@ const NotFoundPage: NextPage = () => {
 
 	return (
 		<div className="flex min-h-screen flex-col items-center justify-center py-2 pb-[3%]">
-			<h1 className="text-9xl text-">404</h1>
-			<p className="text-2xl text-secondary">Returning to the home page</p>
+			<h1 className="text- text-9xl">404</h1>
+			<p className="text-secondary text-2xl">Returning to the home page</p>
 		</div>
 	)
 }

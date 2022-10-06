@@ -5,10 +5,10 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				Main: ["Roboto", "sans-serif"],
-			},
-		},
+				Main: ["Roboto", "sans-serif"]
+			}
+		}
 	},
 
-	plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")],
+	plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar")]
 }
