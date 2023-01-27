@@ -9,12 +9,14 @@
 	},
 	"dependencies": {
 		"axios": "^1.1.3",
-		"framer-motion": "^7.5.1",
+		"csstype": "^3.1.1",
+		"framer-motion": "^8.5.4",
+		"jotai": "^1.13.1",
 		"next": "^13.0.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hot-toast": "^2.4.0",
-		"swr": "^1.3.0"
+		"swr": "^2.0.0"
 	},
 	"devDependencies": {
 		"@headlessui/react": "^1.6.6",
@@ -29,12 +31,14 @@
 		"eslint": "^8.23.0",
 		"eslint-plugin-react": "^7.31.1",
 		"postcss": "^8.4.14",
-		"prettier": "^2.7.1",
-		"prettier-plugin-tailwindcss": "^0.1.13",
+		"prettier": "^2.8.3",
+		"prettier-plugin-organize-imports": "^3.2.2",
+		"prettier-plugin-tailwind-styled-components": "^0.0.2",
+		"prettier-plugin-tailwindcss": "^0.2.2",
 		"react-icons": "^4.4.0",
 		"tailwind-scrollbar": "^2.0.1",
 		"tailwind-styled-components": "^2.2.0",
 		"tailwindcss": "^3.1.2",
-		"typescript": "4.9.3"
+		"typescript": "4.9.4"
 	}
 }
