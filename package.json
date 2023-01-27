@@ -16,7 +16,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-hot-toast": "^2.4.0",
-		"swr": "^2.0.0"
+		"react-query": "^3.39.3"
 	},
 	"devDependencies": {
 		"@headlessui/react": "^1.6.6",
@@ -33,7 +33,6 @@
 		"postcss": "^8.4.14",
 		"prettier": "^2.8.3",
 		"prettier-plugin-organize-imports": "^3.2.2",
-		"prettier-plugin-tailwind-styled-components": "^0.0.2",
 		"prettier-plugin-tailwindcss": "^0.2.2",
 		"react-icons": "^4.4.0",
 		"tailwind-scrollbar": "^2.0.1",

@@ -4,5 +4,7 @@
 	"semi": false,
 	"useTabs": true,
 	"printWidth": 130,
-	"plugins": ["prettier-plugin-organize-imports","prettier-plugin-tailwind-styled-components", "prettier-plugin-tailwindcss"]
+	"plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
+  "pluginSearchDirs" : false
+
 }

@@ -1,5 +1,12 @@
-import { ThemeProvider } from "../theme/ThemeContext"
+import { ReactQuery } from "../swr/ReactQuery"
+import { ThemeProvider } from "../theme/useTheme"
 
-export const GlobalContext = ({ children }: WithChildren) => {
-	return <ThemeProvider>{children}</ThemeProvider>
+const GlobalProvider = ({ children }: WithChildren) => {
+	return (
+		<ReactQuery>
+			<ThemeProvider>{children}</ThemeProvider>
+		</ReactQuery>
+	)
 }
+
+export { GlobalProvider }
