@@ -5,6 +5,5 @@
 	"useTabs": true,
 	"printWidth": 130,
 	"plugins": ["prettier-plugin-organize-imports", "prettier-plugin-tailwindcss"],
-  "pluginSearchDirs" : false
-
+	"pluginSearchDirs": false
 }

@@ -17,5 +17,5 @@ export const ThemeProvider = ({ children }: WithChildren) => {
 		setDarkMode(() => darkInWindow)
 	}, [])
 
-	return <div className={darkMode ? "dark" : "light"}>{children}</div>
+	return <div className={darkMode ? "dark" : ""}>{children}</div>
 }
