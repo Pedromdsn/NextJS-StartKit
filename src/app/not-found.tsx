@@ -1,5 +1,7 @@
+"use client"
+
 import { NextPage } from "next"
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { useEffect } from "react"
 
 const NotFoundPage: NextPage = () => {
