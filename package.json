@@ -30,7 +30,7 @@
 		"classnames": "^2.3.1",
 		"eslint": "^8.23.0",
 		"eslint-plugin-react": "^7.31.1",
-		"postcss": "^8.4.14",
+		"postcss": "^8.4.31",
 		"prettier": "^3.0.0",
 		"prettier-plugin-organize-imports": "^3.2.2",
 		"prettier-plugin-tailwindcss": "^0.4.1",
